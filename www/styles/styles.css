@@ -1,0 +1,460 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+.content-container {
+  margin-bottom: 80px;
+}
+
+.section-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header-top {
+  background-color: #333;
+}
+
+.header-bottom-common {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d1d4d4;
+  background-color: #ffffff;
+}
+
+.header-bottom-pc {
+  display: flex;
+  align-items: center;
+}
+
+/* текст из шапки сайта */
+.text-header a {
+  color: #ffffff !important;
+  line-height: 38px;
+  padding: 10px;
+}
+
+/* текст из шапки сайта */
+.text-header-middle{
+  text-align: center;
+}
+
+/* линия над заголовком "h3"*/
+.header-h{
+  text-align: center;
+  line-height: 38px;
+  font-size: 29px;
+  color: #5a5a5a; /* заголовка */
+}
+.header-h:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 150px; /* линии до наведения */
+  margin: 11px auto -6px;
+  transition: 1s; /* Время, за которое линия возвращается после наведения */
+}
+.header-h:hover:before {
+  background: #f66d52; /* линии */
+  width: 250px; /* линии при наведении */
+  transition: ease-out 1s; /* Время, за которое линия расширяется при наведении */
+}
+/*  CSS код для линии под заголовком */
+.header-h:after {
+  content: '';
+  display: block;
+  height: 1px; /* линии */
+  width: 150px; /* линии до наведения */
+  margin: 2px auto 0px;
+  transition: 1s; /* Время, за которое линия возвращается после наведения */
+}
+.header-h:hover:after {
+  background: #f66d52; /* линии */
+  width: 250px; /* линии при наведении */
+  transition: ease-out 1s; /* Время, за которое линия расширяется при наведении */
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: grey; /* линии */
+  color:#ffc107;
+}
+
+.sidebarHeader {
+  font-size: 25px; /* слова Меню */ 
+  padding: 10px;
+}
+
+.accountLogin {
+  width: 15%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.image {
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover; 
+  display: block; /* тег img – это строковый элемент. Нужно сделать его блоковым*/
+}
+
+.logo {
+  max-width: 180px;
+  margin: 0.5em 0 0.5em 0.6em;
+}
+
+.image.small {
+  margin: auto;
+}
+
+.image.middle {
+  width: 300px; 
+  height: 300px; 
+}
+
+.image.big {
+  width: 40%; 
+  height: 40%;
+  margin: auto;
+}
+
+.tdJust {
+  width: 33%;
+  vertical-align: top;
+}
+
+.font-text-head {
+  font-family:"Proxima Nova";
+}
+
+.text-middle {
+  font-size: 20px;
+}
+
+.text-big {
+  font-size: 25px;
+}
+
+.td2-text-bold {
+  font-weight:bold;
+}
+
+.td2-text-bold {
+  font-weight:bold;
+}
+
+.text-grey {
+  color: #8c8c8c;
+}
+
+a{
+  text-decoration: none !important; 
+}
+a:hover {
+  color: #bd0f2c !important;
+}
+
+.a-edit a{
+  color: #000000 !important;
+}
+
+.text-a-underline {
+  color: #000000 !important;
+  text-decoration-line:underline !important;
+  font-family: sans-serif;
+}
+
+/* Ссылки в левом sidebar */
+.refSidebarCatalog {
+  font-size: 18px; /* ссылок */ 
+}
+.refSidebarCatalog:hover {
+  background: rgb(226, 212, 205); /* Цвет фона при наведении на ссылку курсора */
+  color: rgb(70, 39, 11); /* Новый цвет текста */
+}
+
+.gain-right {
+  transition: 1s; /* Время эффекта */
+}
+.gain-right:hover {
+  transform: scale(1.05); /* Увеличиваем масштаб */
+}
+
+.iconSmall {
+  width:20px;
+  vertical-align:text-bottom;
+}
+
+.vertical-bottom {
+  vertical-align:text-bottom;
+}
+
+.iconSearch1 {
+  width:22px;
+}
+
+.iconSearch2 {
+  width:18px;
+  vertical-align:text-bottom;
+}
+
+.buttonSearch {
+  background: rgb(250, 163, 64);
+  border-radius: 4px;
+}
+
+/* Трёхмерная кнопка "Подробнее", (не используется) */
+.buttonMore {
+  background-color:rgb(105, 105, 105);
+  color:rgb(255, 255, 255);
+}
+.buttonMore:hover {
+  box-shadow:
+    1px 1px #53ea93,
+    2px 2px #53ea93,
+    3px 3px #53ea93,
+    4px 4px #53ea93,
+    5px 5px #53ea93,
+    6px 6px #53ea93,
+    7px 7px #53ea93;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
+}
+
+/* Линия под a у элементов "Вход", "Выход", "Регистрация"*/
+.underlining a {
+  display: inline-block;
+  color: #000000 !important; /* Цвет обычной ссылки */
+  line-height: 56px;
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer;
+}
+.underlining a:after {
+  background-color: #f66d52; /* Цвет линии при наведении на нее курсора мыши */
+  display: block;
+  content: "";
+  height: 2px; /* Высота линии */
+  width: 0%;
+  -webkit-transition: width .3s ease-in-out;
+  -moz--transition: width .3s ease-in-out;
+  transition: width .3s ease-in-out;
+}
+.underlining a:hover:after,
+.underlining a:focus:after {
+  width: 100%;
+}
+
+.notice{
+  text-align: center;
+}
+
+.my-pagination {
+  color: #000000 !important;
+}
+.my-pagination-active {
+  background-color: #ffc107 !important;
+  border-color: #eca712 !important;
+}
+
+.link-all-news {
+  color:#00bfff;
+  font-size: 20px;
+}
+
+.products-list {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.products-item {
+  text-align: center;
+  list-style-type: none;
+  border-radius: 7px;
+  box-shadow: 0 1px 7px #d3d3d3;
+  border: 3mm solid rgb(255, 255, 255);
+}
+.products-item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  border: 3mm solid rgb(244, 245, 247); 
+}
+
+.products-title {
+  padding-top: 5px;
+}
+
+.products-list img {
+  /*width: 100%;*/
+  display: block;
+  margin-top: auto;
+}
+
+.margin-null { 
+  margin: 0em;
+}
+
+.site {
+  display: grid;
+  grid-template-areas: "header" "main" "left-sidebar" "right-sidebar" "footer";     
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+@media (min-width: 1280px) {
+  .site {
+    grid-template: "header           header             header"         min-content
+                   "left-sidebar     main               right-sidebar"  1fr
+                   "footer           footer             footer"         min-content
+               / minmax(auto, 250px) minmax(250px, 1fr) minmax(auto, 250px);    
+  }
+  .header-pc-common {
+    width: calc(100% - 540px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .header-pc-common {
+    width: calc(100% - 0px);
+  }
+}
+
+@media (min-width:1024px) {
+  .header-mobile {
+    display: none;
+  }
+}
+@media (max-width:1023px) {
+  .header-pc {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.header {
+  grid-area: header;
+  overflow: hidden;
+}
+
+.left-sidebar {
+  grid-area: left-sidebar;
+}
+
+.right-sidebar {
+  grid-area: right-sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.products-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.products-item-properties {
+  overflow: hidden;
+}
+
+.close-icon {
+  display: inline-block;
+}
+
+/* Мобильное навигационное меню */
+.navigation-menu {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.navigation-menu-catalog {
+  height:100vh; 
+  width:100%;
+  background:black!important;
+}
+.navigation-menu-catalog-back{
+  position:absolute!important;
+  top:-43px!important;
+  width:100%;
+  background:black!important;
+  cursor: pointer;
+}
+.navbar-list li { 
+  border-bottom: 1px solid #525151; 
+}
+.navbar-text {
+  color: #ffffff!important;
+}
+.container-fluid svg:hover {
+  fill:rgb(255, 255, 255);
+}
+
+/* Иконка профиля */
+.icon-profile svg {
+  fill:#d1d4d4;
+  padding-right: 0.75rem;
+}
+.icon-profile svg:hover {
+  fill:rgb(255, 255, 255);
+}
+/* Стилизация мобильного всплывающего списка профиля */
+.font-menu-profile-li{
+  font-family:"Proxima Nova";
+  line-height: 56px;
+  font-size: 18px;
+  margin: left 56px;
+  background-color: white!important;
+  border-bottom: 1px solid #ddd!important;
+}
+.font-menu-profile-li:hover {
+  background: rgb(244, 245, 247)!important;
+}
+.lower-pointer {
+  position: absolute;
+  right: 17px;
+  margin-top: -8px;
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent rgb(255, 255, 255);
+}
+
+/* Всплывающая карточка при наведении курсора*/
+.overlay{
+  display:none;
+  position:fixed!important;
+  color:black;
+  width: 300px;
+}
+a:hover .overlay{
+  display: block;
+}
+.overlay .card-body{
+  padding-top: 24px!important;
+  padding-bottom: 24px!important;
+  padding-left: 32px!important;
+  line-height: 1.7!important;
+  border-radius: 9px!important;
+  box-shadow: 0 1px 7px #d3d3d3;
+  list-style-type: none!important; 
+}

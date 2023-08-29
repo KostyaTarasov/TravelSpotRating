@@ -1,0 +1,19 @@
+{
+    "name": "koste/travel-spot-rating",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "KostyaTarasov",
+            "email": "mixtmneon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MyProject\\": "src/MyProject/"
+        }
+    },
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
+}
