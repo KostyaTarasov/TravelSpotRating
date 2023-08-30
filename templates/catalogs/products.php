@@ -2,10 +2,13 @@
 $h1 = "$nameCatalog";
 include __DIR__ . '/../header.php';
 ?>
+
 <div class="main">
     <h1><?= $h1 ?></h1>
     <br>
-    <h4>Достопримечательности города <?= $nameCatalog ?></h4>
+    <?php if (!empty($attractions)) : ?>
+        <h4>Достопримечательности города <?= $nameCatalog ?></h4>
+    <?php endif; ?>
     <ul class="products-list">
         <?php foreach ($attractions as $item) : ?>
             <li class="products-item a-edit">
