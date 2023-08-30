@@ -99,7 +99,14 @@ class Attractions extends ActiveRecordEntity
     {
         $idCatalog = $this->getIdCatalog($nameTableCatalog);
         $attractions = $this->getAttractionsById($idCatalog);
-        return $this->addAverageRating($articles, $attractions);
+        $attractionsWithRating = $this->addAverageRating($articles, $attractions);
+        $valueRating = $_POST['rating'] ?? null;
+
+        if (!isset($valueRating) || $valueRating === '0') {
+            return $attractions;
+        }
+
+        return $this->getFilterAttraction($attractionsWithRating, (int) $valueRating);
     }
 
     /**
@@ -153,5 +160,17 @@ class Attractions extends ActiveRecordEntity
             }
         }
         return $attractions;
+    }
+
+    public function getFilterAttraction(array $attractions, int $valueRating): ?array
+    {
+        $filteredAttractions = [];
+        foreach ($attractions as $attraction) {
+            if ($attraction->getAverageRating() === $valueRating) {
+                $filteredAttractions[] = $attraction;
+            }
+        }
+
+        return $filteredAttractions;
     }
 }
