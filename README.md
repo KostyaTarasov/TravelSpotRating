@@ -37,11 +37,22 @@
 
 ## Установка и запуск
 
-1. Клонируйте репозиторий: `git clone https://github.com/KostyaTarasov/TravelSpotRating.git`
-2. Выполните composer install
+1. Клонируйте репозиторий:
+
+   ```
+   git clone https://github.com/KostyaTarasov/TravelSpotRating.git
+   ```
+
+2. Установите пакеты:
+
+   ```
+   composer install
+   ```
+
 3. Настройте окружение и базу данных. Подключение к БД в файле src/settings.php
  - 'host' => 'localhost:3306',
  - 'dbname' => 'service_travelers',
  - 'user' => 'root',
  - 'password' => '',
+
 4. Запустите проект. В моём случае в настройках WampServer VirtualHost: http://travel-spot-rating/
